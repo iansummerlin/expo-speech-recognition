@@ -1,5 +1,5 @@
 {
-  "name": "expo-speech-recognition",
+  "name": "expo-speech-recognition-with-reset",
   "version": "1.0.0",
   "description": "Speech Recognition for React Native Expo projects (with reset)",
   "main": "build/index.js",
