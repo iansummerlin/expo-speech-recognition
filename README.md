@@ -8,7 +8,7 @@ Needed a way to reset result event emitted from the useSpeechRecognition hook in
 
 ```typescript
 // import
-import { ExpoSpeechRecognitionModule } from "expo-speech-recognition";
+import { ExpoSpeechRecognitionModule } from "expo-speech-recognition-with-reset";
 
 // execute
 ExpoSpeechRecognitionModule.reset();
