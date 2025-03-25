@@ -226,6 +226,13 @@ export default function App() {
               disabled={status !== "recognizing"}
               onPress={() => ExpoSpeechRecognitionModule.abort()}
             />
+            <BigButton 
+              title="Reset"
+              onPress={() => {
+                ExpoSpeechRecognitionModule.reset();
+                setTranscription(null);
+              }}
+            />
           </View>
         )}
       </View>

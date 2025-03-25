@@ -5,10 +5,12 @@ import type { ExpoSpeechRecognitionModuleType } from "./ExpoSpeechRecognitionMod
 // It loads the native module object from the JSI or falls back to
 // the bridge module (from NativeModulesProxy) if the remote debugger is on.
 export const ExpoSpeechRecognitionModule =
-  requireNativeModule<ExpoSpeechRecognitionModuleType>("ExpoSpeechRecognition");
+	requireNativeModule<ExpoSpeechRecognitionModuleType>("ExpoSpeechRecognition");
 
 const stop = ExpoSpeechRecognitionModule.stop;
 const abort = ExpoSpeechRecognitionModule.abort;
+const reset = ExpoSpeechRecognitionModule.reset;
 
 ExpoSpeechRecognitionModule.abort = () => abort();
 ExpoSpeechRecognitionModule.stop = () => stop();
+ExpoSpeechRecognitionModule.reset = () => reset();

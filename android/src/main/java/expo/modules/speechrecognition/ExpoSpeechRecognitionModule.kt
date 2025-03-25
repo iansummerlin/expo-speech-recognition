@@ -208,6 +208,10 @@ class ExpoSpeechRecognitionModule : Module() {
                 expoSpeechService.start(options)
             }
 
+            Function("reset") {
+                expoSpeechService.reset()
+            }
+
             Function("stop") {
                 expoSpeechService.stop()
             }

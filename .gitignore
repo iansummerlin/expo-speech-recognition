@@ -58,3 +58,9 @@ yarn-error.log
 
 # Test assets
 example/assets/audio/test/
+
+# Android
+*.cert
+
+# Bun
+bun.lockb

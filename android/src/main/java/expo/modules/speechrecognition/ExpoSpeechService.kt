@@ -214,6 +214,19 @@ class ExpoSpeechService(
     }
 
     /**
+     * Resets the speech recognition transcript.
+     */
+    fun reset() {
+        sendEvent(
+            "result",
+            mapOf(
+                "results" to emptyList<Map<String, Any>>(),
+                "isFinal" to true,
+            ),
+        )
+    }
+
+    /**
      * Destroys the speech service and stops all audio recording
      */
     fun destroy() {

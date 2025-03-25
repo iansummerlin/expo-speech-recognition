@@ -266,6 +266,18 @@ public class ExpoSpeechRecognitionModule: Module {
       }
     }
 
+    Function("reset") { () -> Void in
+      Task {
+        sendEvent(
+          "result",
+          [
+            "isFinal": true,
+            "results": [],
+          ]
+        )
+      }
+    }
+
     Function("setCategoryIOS") { (options: SetCategoryOptions) in
       // Convert the array of category options to a bitmask
       let categoryOptions = options.categoryOptions.reduce(AVAudioSession.CategoryOptions()) {
